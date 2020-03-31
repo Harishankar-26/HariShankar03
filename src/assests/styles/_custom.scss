@@ -1,0 +1,338 @@
+@import "./settings/color";
+@import "./settings/mixin";
+@import "./settings/variables";
+* {
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+label {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+a,
+img,
+i,
+button{
+  text-decoration: none;
+  cursor: pointer;
+}
+button,
+input {
+  border: none;
+}
+
+// Bootstrap alter button
+
+.btn-primary {
+  background: $primary-color;
+  border: $primary-color;
+}
+.btn-link {
+  color: $light-white-65;
+}
+// content starts here
+.body {
+  color: $light-color;
+}
+.users-portal {
+  height: calc(100vh - 70px);
+  background: $light-color;
+  .logo {
+    margin-bottom: $m-24;
+    img {
+      width: 100px;
+    }
+  }
+  .login-content {
+    max-width: 440px;
+    .body-content {
+      p {
+        @include font-spacing(20px, 600, 28px, 0.25px, $dark-color);
+        margin-bottom: $m-24;
+      }
+      .forgot-password {
+        a {
+          @include font-spacing(12px, 400, 18px, 0.2px, $secondary-color);
+          &:hover {
+            color: $primary-color;
+          }
+        }
+        button {
+          width: 76px;
+          height: 44px;
+          @include font-spacing(16px, 400, 24px, 0.27px, $light-white);
+          &:hover {
+            background: $primary-dark;
+          }
+        }
+      }
+    }
+  }
+}
+
+.form-group {
+  label {
+    @include font-spacing(12px, 600, 18px, 0.5px, $dark-color);
+  }
+  input {
+    width: 100%;
+    border: $border-dark-5;
+    height: 46px;
+    padding-left: $p-12;
+    border-radius: 3px;
+    &::placeholder {
+      @include font-spacing(14px, 400, 21px, 0.23px, $dark-color-35);
+    }
+    &:hover {
+      border-color: $primary-color;
+    }
+  }
+}
+
+.account-portal {
+  p {
+    @include font-spacing(14px, 400, 21px, 0.23px, $dark-color-85);
+    margin-top: $m-24;
+  }
+  a {
+    color: $primary-color;
+    &:hover {
+      color: $primary-dark;
+    }
+  }
+}
+
+// Footer content details
+.footer {
+  height: 70px;
+  margin-top: 52px;
+  background: $secondary-color;
+  .container {
+    img {
+      width: 95px;
+      height: 36px;
+    }
+    p {
+      @include font-h(14px, 400, 21px, $light-white-65);
+    }
+    .footer-buttons {
+      button {
+        padding: 0 10px 0;
+        border-right: 1px solid $light-white-65;
+        &:hover {
+          color: $light-white;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+.body-content {
+  padding: $p-24;
+  background: $light-white;
+  border-radius: 5px;
+  box-shadow: $box-shadow;
+}
+
+.users-portal {
+  .logo {
+    margin-top: 70px;
+  }
+  .user-signin {
+    max-width: 440px;
+    .body-content {
+      p {
+        @include font-spacing(20px, 600, 16.8px, 0.75px, $dark-color);
+        margin-bottom: $m-24;
+      }
+      .signup-button {
+        button {
+          width: 93px;
+          height: 44px;
+          @include font-spacing(16px, 400, 24px, 0.27px, $light-white);
+          &:hover {
+            background: $primary-dark;
+          }
+        }
+      }
+    }
+  }
+}
+
+.contents {
+  background: $light-color;
+  .header {
+    padding: $p-12 0;
+    margin: 0 $m-60;
+    .logo {
+      img {
+        width: 100px;
+      }
+    }
+    .users-profile {
+      width: 160px;
+      a {
+        width: 32px;
+        height: 32px;
+        color: $primary-color;
+        background-color: $primary-dim;
+        &:hover {
+          color: $primary-dark;
+          text-decoration: none;
+        }
+      }
+      p {
+        cursor: pointer;
+        @include font-spacing(13px, 600, 16.8px, 0.5px, $dark-color);
+      }
+      img {
+        width: 8px;
+      }
+    }
+  }
+  .stepper-content {
+    overflow: auto;
+    .stepper {
+      .container {
+        background: $light-white;
+        border-radius: 50px;
+        .stepper-list {
+          height: 52px;
+          padding: $p-8 0;
+          .steps {
+            cursor: pointer;
+            border-radius: 21px;
+            padding: $p-8;
+            a {
+              background: $dark-color-5;
+              color: $light-white;
+              width: 20px;
+              height: 20px;
+              border-radius: 12px;
+              margin-right: $m-8;
+            }
+            p {
+              @include font-spacing(13px, 600, 16.8px, 0.22, $dark-color-45);
+            }
+            &:hover {
+              background: $primary-dim;
+              border-radius: 21px;
+              a {
+                background: $primary-color;
+                color: $light-white;
+                text-decoration: none;
+              }
+              p {
+                color: $primary-color;
+              }
+            }
+          }
+          .fill-bar {
+            width: 50px;
+            height: 2px;
+            margin: 0 8px;
+            background: $dark-color-5;
+          }
+        }
+      }
+    }
+    .main-content {
+      .container {
+        margin-top: $m-16;
+        margin-bottom: $m-16;
+        background: $light-white;
+        // height: calc(100vh - 220px);
+        border-radius: 5px;
+        padding: $p-24;
+        .upper-content {
+          padding-top: $p-24;
+          max-width: 400px;
+          p {
+            padding-bottom: $p-24;
+          }
+          form {
+            .form-group {
+              textarea {
+                width: 100%;
+                height: 100px;
+                padding-left: 12px;
+                border: $border-dark-5;
+                border-radius: 3px;
+                resize: none;
+                &::placeholder {
+                  @include font-spacing(
+                    14px,
+                    400,
+                    16.8px,
+                    0.23px,
+                    $dark-color-35
+                  );
+                }
+                &:hover {
+                  border-color: $primary-color;
+                }
+              }
+            }
+          }
+        }
+        .switch-buttons {
+          & :first-child {
+            border: 1px solid $dark-color-20;
+            margin-right: $m-16;
+            background: $dark-color-1;
+            @include font(16px, 600, $dark-color-45);
+            &:hover {
+              color: $dark-color;
+              border-color: $dark-color;
+            }
+          }
+          & :last-child:hover {
+            background: $primary-dark;
+            border-color: $primary-dark;
+          }
+        }
+      }
+    }
+  }
+}
+
+// // check file scss starts here
+
+// .check {
+//   .container {
+//     padding-top: 30px;
+//     form {
+//       display: flex;
+//       flex-wrap: wrap;
+//       align-items: center;
+//       .lable-name {
+//         width: 33.33%;
+//         padding-bottom: 20px;
+//         display: flex;
+//         align-items: center;
+//         justify-content: center;
+//         input {
+//           width: 16px;
+//           height: 16px;
+//           margin-right: 16px;
+//         }
+//       }
+//     }
+//   }
+// }
